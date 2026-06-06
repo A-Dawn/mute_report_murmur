@@ -1,0 +1,42 @@
+{
+  "manifest_version": 2,
+  "version": "1.0.0",
+  "name": "禁言报告(碎碎念)",
+  "description": "监听 NapCat 群禁言通知，在机器人被禁言时生成小报告，并阻止禁言群后续消息触发回复链。",
+  "author": {
+    "name": "A-Dawn",
+    "url": "https://github.com/A-Dawn"
+  },
+  "license": "GPL-v3.0-or-later",
+  "urls": {
+    "repository": "https://github.com/A-Dawn/mute_report_murmur",
+    "homepage": "https://github.com/A-Dawn/mute_report_murmur",
+    "documentation": "https://github.com/A-Dawn/mute_report_murmur/blob/main/README.md",
+    "issues": "https://github.com/A-Dawn/mute_report_murmur/issues"
+  },
+  "host_application": {
+    "min_version": "1.0.0",
+    "max_version": "1.0.0"
+  },
+  "sdk": {
+    "min_version": "2.5.2",
+    "max_version": "2.99.99"
+  },
+  "dependencies": [],
+  "capabilities": [
+    "chat.get_stream_by_group_id",
+    "chat.get_stream_by_user_id",
+    "maisaka.context.append",
+    "maisaka.proactive.trigger",
+    "send.text",
+    "api.call"
+  ],
+  "i18n": {
+    "default_locale": "zh-CN",
+    "locales_path": "_locales",
+    "supported_locales": [
+      "zh-CN"
+    ]
+  },
+  "id": "github.A-Dawn.mute-report-murmur"
+}
