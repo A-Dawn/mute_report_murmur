@@ -116,6 +116,13 @@ class MuteReportMurmurPlugin(MaiBotPlugin):
         self._mute_states.clear()
         self._get_logger().info("禁言报告(碎碎念)插件已卸载")
 
+    async def on_config_update(self, scope: str, config_data: dict[str, object], version: str) -> None:
+        """处理配置热重载。"""
+
+        del config_data
+        self._mute_states.clear()
+        self._get_logger().info(f"禁言报告(碎碎念)配置已更新: scope={scope}, version={version}")
+
     @HookHandler(
         "chat.receive.before_process",
         name="mute_report_murmur_before_process",
